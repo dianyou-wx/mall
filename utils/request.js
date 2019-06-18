@@ -1,15 +1,16 @@
-// import mockData from "./mockData.json";
-const mockData = require("./mockData.json")
-const regeneratorRuntime = require('./runtime.js');
-// const mockData = require('./mockData.json');
-let env = "dev"
-// let env = "product"
+import mockData from "./mockData";
+console.log(mockData);
+// const mockData = require("./mockData");
+// const regeneratorRuntime = require('./runtime.js');
+// // const mockData = require('./mockData.json');
+// let env = "dev"
+// // let env = "product"
 
-let prefix = "https://api.puman.xyz/cute";
+// let prefix = "https://api.puman.xyz/cute";
 
-function getMockData() {
-    return mockData
-}
+// function getMockData() {
+//     return mockData
+// }
 // async function swiper() {
 //     return new Promise(resolve => {
 //         if (env === "dev") {
@@ -26,7 +27,9 @@ function getMockData() {
 //     })
 // }
 // module.exports = swiper
-
-module.exports = function abc() {
-    return { age: 123 }
+function abc() {
+  return { age: 123 };
 }
+// module.exports =abc
+
+export default abc;
