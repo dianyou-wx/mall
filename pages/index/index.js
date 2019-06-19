@@ -1,7 +1,6 @@
 //获取应用实例
 import utils from "../../utils/request.js";
 let { swiper } = utils;
-console.log(swiper);
 const regeneratorRuntime = require("../../utils/runtime.js");
 var app = getApp();
 Page({
@@ -36,7 +35,7 @@ Page({
       images: data.carouserList
     });
     that.setData({
-      venuesItems: data.carouserList
+      venuesItems: data.themeList
     });
     that.setData({
       selectedList: data.selectedList

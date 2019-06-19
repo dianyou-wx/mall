@@ -1,4 +1,5 @@
-import classify from "../../utils/request.js";
+import utils from "../../utils/request.js";
+let { classify } = utils;
 const regeneratorRuntime = require("../../utils/runtime.js");
 var app = getApp();
 Page({
@@ -10,7 +11,7 @@ Page({
   },
   async onLoad() {
     var that = this;
-    let data = await classify.classify();
+    let data = await classify();
     that.setData({
       navLeftItems: data,
       navRightItems: data
