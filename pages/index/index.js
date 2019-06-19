@@ -1,6 +1,6 @@
 //获取应用实例
-import swiper from "../../utils/request.js";
-console.log(swiper);
+// import swiper from "../../utils/request.js";
+// console.log(swiper);
 const regeneratorRuntime = require("../../utils/runtime.js");
 var app = getApp();
 Page({
@@ -29,7 +29,8 @@ Page({
       });
     });
 
-    let data = await swiper();
+    // let data = await swiper();
+    let data = { carouserList: [], selectedList: [] };
     that.setData({
       images: data.carouserList
     });

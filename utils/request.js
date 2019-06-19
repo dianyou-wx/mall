@@ -9,7 +9,7 @@ let prefix = "https://api.puman.xyz/cute";
 function getMockData() {
   return mockData;
 }
-async function swiper() {
+export default async function swiper() {
   return new Promise(resolve => {
     if (env === "dev") {
       resolve(getMockData());
@@ -46,5 +46,4 @@ async function swiper() {
 
 // export default { swiper, classify };
 
-let kkk = { swiper: swiper };
-export default kkk;
+// module.exports = 123;
