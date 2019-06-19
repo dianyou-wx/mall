@@ -44,4 +44,4 @@ function classify() {
   });
 }
 
-module.exports = { swiper, classify };
+export default { swiper, classify };
