@@ -1,10 +1,7 @@
 //获取应用实例
-// import { swiper } from "../../utils/request.js";
-// const swiper = require("../../utils/request.js");
-import swiper from "../../utils/request";
-console.log({ swiper }, swiper.default + "");
+import swiper from "../../utils/request.js";
+console.log(swiper);
 const regeneratorRuntime = require("../../utils/runtime.js");
-console.log(regeneratorRuntime);
 var app = getApp();
 Page({
   data: {
@@ -13,21 +10,12 @@ Page({
     autoplay: true,
     interval: 3000,
     duration: 1000,
-    loadingHidden: false, // loading
-    images: "",
-    venuesItems: "",
-    choiceItems: ""
+    loadingHidden: true // loading
   },
 
   //事件处理函数
   swiperchange: function(e) {
     //console.log(e.detail.current)
-  },
-
-  abc: async () => {
-    return new Promise(resole => {
-      setTimeout(resole, 5000);
-    });
   },
 
   async onLoad() {
@@ -41,14 +29,16 @@ Page({
       });
     });
 
-    console.log("111111111111111", new Date());
-    await this.abc();
-    console.log("2222222222222", new Date());
-
-    // let data = swiper();
-    // this.images = data.carouserList;
-    // this.venuesItems = data.themeList;
-    // this.choiceItems = data.selectedList;
+    let data = await swiper();
+    that.setData({
+      images: data.carouserList
+    });
+    that.setData({
+      venuesItems: data.carouserList
+    });
+    that.setData({
+      selectedList: data.selectedList
+    });
 
     //     //sliderList
     //     // wx.request({

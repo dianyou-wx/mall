@@ -30,11 +30,11 @@
     </view>
     <view class="choice_box">
         <view class="choice_list">
-            <block wx:for="{{choiceItems}}">
+            <block wx:for="{{selectedList}}">
                 <navigator url="../details/index?id={{item.id}}">
                     <view class="choice_item">
                         <image src="{{item.imgUrl}}" />
-                        <!-- <view class="title">{{item.title}}</view> -->
+                        <view class="title">{{item.title}}</view>
                     </view>
                 </navigator>
             </block>
