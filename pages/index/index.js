@@ -29,7 +29,7 @@ Page({
       });
     });
 
-    let data = await swiper();
+    let data = await swiper.swiper();
     that.setData({
       images: data.carouserList
     });
