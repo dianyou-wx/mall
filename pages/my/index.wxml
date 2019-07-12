@@ -1,19 +1,21 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <view bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl?userInfo.avatarUrl:'https://mucheng2020.oss-cn-hangzhou.aliyuncs.com/mall/classify/xiangji.jpg'}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName?userInfo.nickName:'张三'}}</text>
   </view>
   <view class="info_list">
     <block wx:for="{{userListInfo}}">
-        <view class="weui_cell">
-            <view class="weui_cell_hd"><image src="{{item.icon}}"></image></view>
-            <view class="weui_cell_bd">
-                <view class="weui_cell_bd_p"> {{item.text}} </view>
-            </view>
-            <view wx:if="{{item.isunread}}" class="badge">{{item.unreadNum}}</view>
-            <view class="with_arrow"></view>
+      <view class="weui_cell" bindtap="goTo" data-index="{{item.text}}">
+        <view class="weui_cell_hd">
+          <image src="{{item.icon}}"></image>
         </view>
+        <view class="weui_cell_bd">
+          <view class="weui_cell_bd_p">{{item.text}}</view>
+        </view>
+        <view wx:if="{{item.isunread}}" class="badge">{{item.unreadNum}}</view>
+        <view class="with_arrow"></view>
+      </view>
     </block>
   </view>
 </view>

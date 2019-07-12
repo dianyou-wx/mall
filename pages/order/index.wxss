@@ -1,0 +1,67 @@
+/**index.wxss**/
+.container {
+  background-color: #f2f2f2;
+}
+.container .main .list {
+  padding: 10px 20px;
+}
+.container .main .list .item {
+  background: white;
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+}
+.container .main .list .item .top {
+  text-align: right;
+  color: red;
+  font-size: 14px;
+}
+.container .main .list .item .content {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+.container .main .list .item .content .left {
+  width: 35%;
+}
+.container .main .list .item .content .center {
+  font-size: 14px;
+  width: 55%;
+}
+.container .main .list .item .content .center .down {
+  color: gray;
+  font-size: 12px;
+}
+.container .main .list .item .content .left image {
+  width: 100px;
+  height: 100px;
+}
+.container .main .list .item .content .right {
+  text-align: right;
+  font-size: 14px;
+}
+.container .main .list .item .content .right .down {
+  color: gray;
+}
+.container .main .list .item .foot {
+  margin-top: 10px;
+}
+.container .main .list .item .foot .price {
+  text-align: right;
+  font-size: 14px;
+}
+.container .main .list .item .foot .btn {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+.container .main .list .item .foot .btn button {
+  margin: 0;
+  font-size: 16px;
+  line-height: 30px;
+  border-radius: 15px;
+  border: 1px solid gray;
+}
+.container .main .list .item .foot .btn .button {
+  margin-right: 10px;
+}

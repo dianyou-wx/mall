@@ -1,4 +1,38 @@
 <view class="container">
-  <image src="{{cartImg}}" class="cart-image"/>
-  <view>{{tipWords}}</view>
+  <view class="none" wx:if="{{cartList.length==0}}">
+    <image src="{{cartImg}}" class="cart-image" />
+    <view>{{tipWords}}</view>
+  </view>
+  <view class="cartBox" wx:else>
+    <view class="head">
+      <view class="left">共{{cartList.length}}件宝贝</view>
+      <view class="right">
+        <button>管理</button>
+      </view>
+    </view>
+    <view class="main">
+      <view class="list">
+        <view class="item" wx:for="{{cartList}}">
+          <view class="left">
+            <radio value="" checked="" />
+          </view>
+          <view class="img">
+            <image src="{{item.img}}" />
+          </view>
+          <view class="right">
+            <view class="up">{{item.name}}</view>
+            <view class="center">{{item.describe}}</view>
+            <view class="down">
+              <view class="left">￥{{item.price}}</view>
+              <view class="right">
+                <view class="reduce" bindtap="reduce" data-index="{{index}}">-</view>
+                <view class="number">{{item.number}}</view>
+                <view class="plus" bindtap="plus" data-index="{{index}}">+</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

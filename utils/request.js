@@ -3,6 +3,8 @@ import mockData1 from "./mockData1.js";
 import mockData2 from "./mockData2.js";
 import mockData3 from "./mockData3.js";
 import mockData4 from "./mockData4.js";
+import mockData5 from "./mockData5.js";
+import mockData6 from "./mockData6.js";
 const regeneratorRuntime = require("./runtime.js");
 let env = "dev";
 // // let env = "product"
@@ -106,4 +108,42 @@ function details(id) {
   });
 }
 
-export default { swiper, classify, brand, brandlist, details };
+function getMockData5() {
+  return mockData5;
+}
+function cart() {
+  return new Promise(resolve => {
+    if (env === "dev") {
+      resolve(getMockData5());
+      return;
+    }
+    wx.request({
+      url: prefix + "/cart",
+      method: "GET",
+      success(res) {
+        resolve(res.data);
+      }
+    });
+  });
+}
+
+function getMockData6() {
+  return mockData6;
+}
+function order() {
+  return new Promise(resolve => {
+    if (env === "dev") {
+      resolve(getMockData6());
+      return;
+    }
+    wx.request({
+      url: prefix + "/order",
+      method: "GET",
+      success(res) {
+        resolve(res.data);
+      }
+    });
+  });
+}
+
+export default { swiper, classify, brand, brandlist, details, cart, order };

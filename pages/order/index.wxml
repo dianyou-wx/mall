@@ -1,0 +1,32 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="main">
+    <view class="list">
+      <view class="item" wx:for="{{orderList}}">
+        <view class="top">{{item.status}}</view>
+        <view class="content">
+          <view class="left">
+            <image src="{{item.img}}" />
+          </view>
+          <view class="center">
+            <view class="up">{{item.name}}</view>
+            <view class="down">{{item.describe}}</view>
+          </view>
+          <view class="right">
+            <view class="up">￥{{item.price}}</view>
+            <view class="down">x{{item.number}}</view>
+          </view>
+        </view>
+        <view class="foot">
+          <view class="price">
+            <text decode="{{true}}">共{{item.number}}件商品&emsp;合计：￥{{item.number*item.price}}</text>
+          </view>
+          <view class="btn">
+            <button class="button">查看物流</button>
+            <button>评价</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

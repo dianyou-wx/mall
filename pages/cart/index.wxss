@@ -1,12 +1,80 @@
 .container {
   display: flex;
   height: 100%;
-  align-items: center;/*垂直居中*/
-  justify-content: center;/*水平居中*/
-  background-color: #F2f2f2;
+  align-items: center; /*垂直居中*/
+  justify-content: center; /*水平居中*/
+  background-color: #f2f2f2;
   color: #939393;
 }
-.container .cart-image {
+.container .none .cart-image {
   width: 120px;
   height: 120px;
+}
+.container .cartBox {
+  padding-top: 10px;
+  width: 100%;
+}
+.container .cartBox .head {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .cartBox .head .left {
+  line-height: 50px;
+}
+.container .cartBox .main .list {
+  padding: 10px 20px;
+}
+.container .cartBox .main .list .item {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid rgb(178, 178, 178);
+}
+.container .cartBox .main .list .item .left {
+  display: flex;
+  align-items: center;
+}
+.container .cartBox .main .list .item .img image {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+.container .cartBox .main .list .item .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .cartBox .main .list .item .right .up {
+  color: black;
+}
+.container .cartBox .main .list .item .right .center {
+  font-size: 12px;
+}
+.container .cartBox .main .list .item .right .down {
+  display: flex;
+  justify-content: space-between;
+}
+.container .cartBox .main .list .item .right .down .left {
+  color: red;
+}
+.container .cartBox .main .list .item .right .down .right {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  border: 0.5px solid rgb(178, 178, 178);
+}
+.container .cartBox .main .list .item .right .down .right .reduce {
+  border-right: 0.5px solid rgb(178, 178, 178);
+}
+.container .cartBox .main .list .item .right .down .right .plus {
+  border-left: 0.5px solid rgb(178, 178, 178);
+}
+.container .cartBox .main .list .item .right .down .right view {
+  width: 20px;
+  text-align: center;
+}
+.container .cartBox .main .list .item .right .down .right .number {
+  width: 30px;
 }
